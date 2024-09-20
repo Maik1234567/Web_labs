@@ -1,0 +1,15 @@
+@import "./normalize.min.css";
+
+@import "./globals.css";
+
+@import "./header.css";
+
+@import "./1_section.css";
+
+@import "./2_section.css";
+
+@import "./3_section.css";
+
+@import "./footer.css"
+    
+    

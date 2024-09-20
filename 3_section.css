@@ -1,0 +1,150 @@
+.price {
+    width: 100%;
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: width 0.3s ease;
+}
+
+.price h2 {
+    color: #091133;
+    font-weight: 500;
+    font-size: 50px;
+    transition: font-size 0.3s ease;
+    text-align: left;
+}
+
+.price p {
+    color: #6F7CB2;
+    font-weight: 400;
+    font-size: 16px;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: left; 
+}
+
+.three-column {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    animation: slideInUp 1.5s ease-in-out;
+}
+
+.three-column h2 {
+    color: #6F7CB2;
+    font-size: 46px;
+    font-weight: 500;
+    transition: font-size 0.3s ease;
+}
+
+.three-column h3 {
+    color: #091133;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.three-column p {
+    color: #5D6970;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.custom-col {
+    margin-right: 30px;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.three-column button {
+    display: inline-block; 
+    color: #ffffff;
+    background: #111B47;
+    padding: 4px 84px;
+    margin-top: 20px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.three-column button:hover {
+    background-color: #0D143A;
+}
+
+/* Адаптивність */
+@media (max-width: 1200px) {
+    .price {
+        width: 90%;
+    }
+
+    .price h2 {
+        font-size: 40px;
+    }
+
+    .three-column h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .three-column {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .price {
+        width: 100%;
+    }
+
+    .price h2 {
+        font-size: 35px;
+        text-align: center
+    }
+
+    .price p {
+        text-align: center;
+    }
+
+    .three-column h2, .three-column h3, .three-column p {
+        text-align: center;
+    }
+
+    .three-column button {
+        width: 100%; 
+        max-width: 200px; 
+        padding: 8px 40px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price h2 {
+        font-size: 28px;
+    }
+
+    .three-column h2 {
+        font-size: 24px;
+    }
+
+    .three-column h3 {
+        font-size: 18px;
+    }
+
+    .three-column p {
+        font-size: 12px;
+    }
+
+    .three-column button {
+        padding: 8px 20px;
+    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(100%); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

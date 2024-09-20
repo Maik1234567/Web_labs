@@ -1,0 +1,140 @@
+.second {
+    margin: 0 auto; 
+    padding: 60px 20px; 
+    animation: slideInRight 1.5s ease-in-out;
+    max-width: 1110px;    
+}
+
+.second_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.left-column {
+    flex: 1; 
+    min-width: 300px; 
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.light_title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 66px;
+    letter-spacing: 1px;
+    color: #091133;
+    margin: 50px 0 33px;
+    transition: font-size 0.3s ease;
+}
+
+.light {
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 108px;
+    transition: padding 0.3s ease;
+}
+
+.light p {
+    font-weight: 400;
+    line-height: 26px;
+    color: #6F7CB2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.right-column {
+    flex: 1; 
+    min-width: 300px; 
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .light_title {
+        font-size: 40px;
+    }
+    
+    .light {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        flex-basis: 100%; 
+        text-align: center; 
+    }
+
+    .light {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .light_title {
+        font-size: 32px;
+    }
+
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .two-columns h3, .two-columns p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .light {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .right-column {
+        order: 2; 
+    }
+
+    .left-column {
+        order: 1; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .light_title {
+        font-size: 28px;
+    }
+
+    .light {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .two-columns h3 {
+        font-size: 14px;
+    }
+
+    .two-columns p {
+        font-size: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

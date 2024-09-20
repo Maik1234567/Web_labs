@@ -1,0 +1,147 @@
+.header {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-block {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+  display: none;
+  width: 32px;
+  cursor: pointer;
+}
+
+.header__menu > img {
+  max-width: 100%;
+}
+
+.header__menu-icon {
+  width: 40px;
+}
+
+
+.header_nav {
+    display: flex;
+}
+
+.header_nav ul {
+    display: flex;
+}
+
+.header_nav_item {
+    margin-right: 60px;
+}
+
+.title {
+    margin-right: 60px;
+    margin-left: 10%;
+    color: #6F7CB2;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 26px;
+    align-self: center;
+}
+
+.header_button_1,
+.header_button_2 {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header_button_1 {
+    color: #FFFFFF;
+    font-weight: 500;
+    background: #111B47;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.header_button_2 {
+    color: #111B47;
+    padding: 10px 20px;
+    background: #FFD166;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+    .header {
+    /*position: fixed;*/
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header_button_2 {
+    display: none;
+  }
+  
+    .header_button_1{
+        display: none;
+    }
+
+  .header_nav {
+    background: #e7ecff;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    clip-path: circle(0 at top left);
+    transition: clip-path 0.9s ease-in;
+  }
+
+  .header_nav.open {
+    clip-path: circle(1000px at top);
+  }
+
+  .header_nav ul {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header_nav .header_nav_item {
+    margin-right: 0;
+    padding-top: 10vh;
+    flex: 1;
+  }
+
+  .header_nav a {
+    font-weight: 500;
+    display: block;
+    font-size: 32px;
+  }
+}
+
+
+@media (min-width: 700px) {
+    .header_buttons {
+        display: flex;
+    }
+
+    .header_button_1:hover,
+    .header_button_2:hover {
+        transform: scale(1.05); 
+    }
+}
